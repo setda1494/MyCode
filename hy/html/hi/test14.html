@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            제목
+        </title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+            <fieldset>
+            <legend><b>개인정보</b></legend>
+            <ui>
+                <label for="name">&nbsp;&nbsp;&nbsp;<b>이름</b>&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="name">
+                </ui>
+                <br>
+                <ui>
+                <label for="ponnum"><b>전화번호</b></label></label>
+                <input type="tel" id="ponnum">
+                </ui>
+            </fieldset>            
+            <fieldset>
+                <legend><b>배송지 번호</b></legend>
+                <label for="addr">&nbsp;&nbsp;&nbsp;<b>주소</b>&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="addr">
+                </ui>
+                <br>
+                <ui>
+                <label for="ponnum"><b>전화번호</b></label>
+                <input type="tel" id="ponnum">
+                <br>
+                <ui>
+                <label for="ponnum"><b>메모</b></label>
+                <textarea cols="50" rows="4" placeholder="요청사항을 적어주세요."></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><b>주문정보</b></legend>
+                <ui>
+                    <form oninput="reset.value=parseInt(GC.value)*5000+parseInt(IM.value)*5500+parseInt(TD.value)*6000">
+                    <label for="GC">과테말라 안티구아(100g, 5000원)</label>
+                    <input type="number" id="GC" >
+                    개
+                    <br>
+                    <label for="IM"><b>인도네시아 만델링(100g, 5500원)</b></label> 
+                    <input type="range" min="1" max="50" id="IM" >
+                    <br>
+                    <label for="IM"><b>탐라는도다(볼렌딩)(100g, 6000원)</b></label>
+                    <select id="TD" name="TD">
+                        <option value="1" label="1">1</option>
+                        <option value="2" label="2">2</option>
+                        <option value="3" label="3">3</option>
+                        <option value="4" label="4">4</option>
+                        <option value="5" label="5">5</option>
+                    </select>
+                    <br>
+                    개＝<output name="reset" for="GC IM TD">0</output>
+                </form>
+                </fieldset> 
+          </form>
+          
+    </body>
+</html>

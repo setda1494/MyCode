@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            <title>test13</title>
+        </title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <label><input type="date" id="start"></label>
+        <label><input type="date" id="end"></label>
+        <hr>
+        <label>시작 시간<input type="time" value="09:00" id="start"></label>,
+        <label>종료 시간<input type="time" value="18:00" id="end"></label>
+        <label>시작 시간<input type="datetime-local" value="2016-03-02T09:00" id="start"></label>,
+        <label>종료 시간<input type="datetime-local" value="2016-03-02T18:00" id="end"></label>
+        <hr>
+        <select id="class">
+            <optgroup label="공과대학">
+              <option value="archi">건축공학과</option>
+              <option value="mechanic">기계공학과</option>
+              <option value="indust">산업공학과</option>
+              <option value="elec">전기전자공학과</option>
+              <option value="computer">컴퓨터공학과</option>
+              <option value="chemical">화학공학과</option>
+            </optgroup>
+            <optgroup label="인문대학">
+              <option value="history">사학과</option>
+              <option value="lang">어문학부</option>
+              <option value="philo">철학</option>
+            </optgroup>
+          </select>
+        <hr>
+        <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+            <input type="number" name="num1" value="0">
+            +<input type="number" name="num2" value="0">
+            =<output name="result" for="num"></output>
+        </form>
+        <hr>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0<input type="range" id="a" value="50">100
+            + <input type="number" id="b" value="200">
+            = <output name="x" for="a b"></output>
+          </form>
+        <hr>
+
+          
+          
+    </body>
+</html>

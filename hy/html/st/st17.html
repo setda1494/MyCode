@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            st17
+        </title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <p>라디오 태그 과목 선택</p>
+            <label><input type="radio" name="subject" value="math">수학</label>
+            <label><input type="radio" name="subject" value="english">영어</label>
+            <label><input type="radio" name="subject" value="science">과학</label>
+            <hr>
+            <p>체크박스 태그 컴퓨터 언어 선택</p>
+            <label><input type="checkbox" name="lang1" value="C">C</label>
+            <label><input type="checkbox" name="lang2" value="Python">Python</label>
+            <label><input type="checkbox" name="lang3" value="java">java</label>
+        </form>
+        <hr>
+        <form>
+            <p>5월 12일 부터 7월 12일 까지</p>
+            <input type="date" min="2023-05-12" max="2023-07-12">
+        </form>
+        <hr>
+        <form>            
+            <label>ID<input type="text" placeholder="ID" autofocus required></label>
+            <br>            
+            <label>비밀번호<input type="password" placeholder="PWD" required></label>
+            <br>
+            <label>입력불가<input type="text" value="입력불가" readonly required></label>
+            <br>
+            <input type="reset" value="초기화">
+            <input type="submit" value="전송">  
+        </form>
+        <hr>
+        <form>
+            <label for="class">
+                학과
+                <select size="1" id="class">
+                    <optgroup label="컴퓨터공학부">
+                        <option value="c1">컴정과</option>
+                        <option value="c2">컴소과</option>
+                        <option value="c3">인소과</option>
+                    </optgroup>
+                    <optgroup label="기계공학부">
+                        <option value="a1">기공과</option>
+                        <option value="a2">기설과</option>
+                    </optgroup>
+                </select>
+            </label>
+        </form>
+        <hr>
+        <p>자기소개</p>
+        <textarea name="intro" rows="7" cols="50"></textarea>
+    </body>
+</html>
