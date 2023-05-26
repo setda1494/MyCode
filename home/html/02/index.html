@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style>
+        /*제목 css*/
+        .title 
+        {
+            font-weight: bold;
+            font-size: 35px;
+            position: absolute;
+            line-height : 100px;
+            margin-left: 10px;
+            text-shadow: 2px 2px 4px darkgray ;
+        }
+        /*내 정보*/
+        .titlemyinfo
+        {
+            margin-left: 10px;
+        }
+        /*제목 상자 css*/
+        .titlediv
+        {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        /*제목 이미지 css*/
+        .titleimg
+        {
+            width: auto;
+            height: 100px;
+        }
+        /*메뉴 이름 css*/
+        .manutitle
+        {
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+            
+        }
+        /*메뉴 목록 css*/
+        .manu
+        {
+            width: 10%;
+            float: left;
+            border: 1px solid black;
+            height: 860px;
+        }
+        /*메인 내용 css*/
+        .mane
+        {
+            width: 89%;
+            float: left;
+            border: 1px solid black;
+            height: 860px
+        }
+
+        li
+        {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;            
+        }/*메뉴 정열 css*/
+        
+    </style>
+</head>
+
+<body>
+    <head>
+        <div class="titlediv">
+            <img src="img\DMUIMG.png" class="titleimg">
+            <span class="title">웹 프로그래밍 과제</span>
+            <span class="titlemyinfo">학번 : 20231549 이름 : 최승주</span>
+        </div>
+    </head>
+    <nav>
+        <div class="manu">
+            <p class="manutitle">목록</p>
+            <ul>
+                <li><a href="" target="mane">목록</a></li>
+                <li><a href="" target="mane">목록</a></li>
+                <li><a href="" target="mane">목록</a></li>
+                <li><a href="" target="mane">목록</a></li>
+                <li><a href="" target="mane">목록</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <iframe src="detail01.html" name="mane" class="mane"></iframe>
+    </main>
+    
+    
+</body>
+</html>
