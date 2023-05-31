@@ -44,17 +44,28 @@
         {
             width: 10%;
             float: left;
+<<<<<<< HEAD
             border: 1px dotted black;
+=======
+            border: 1px dashed black;
+>>>>>>> 6fb64e2dd0f5f31d2104047b5441f15995722183
             height: 860px;
         }
         /*메인 내용 css*/
         .mane
         {
+<<<<<<< HEAD
             margin: 10px;
             width: 85%;
             float: left;
             height: 860px;
             border: 0px;
+=======
+            width: 79%;
+            float: left;
+            border: 0px solid black;
+            height: 860px
+>>>>>>> 6fb64e2dd0f5f31d2104047b5441f15995722183
         }
         /*메뉴 정열 css*/
         li
@@ -63,12 +74,60 @@
             font-size: 20px;
             margin-bottom: 10px;            
         }
+<<<<<<< HEAD
         
+=======
+        /*로그인 창이 포함되있는 창*/
+        .inlogin
+        {
+            float: right;
+            width: 10%;
+            height: 860px;
+            border: 1px dotted black;
+            
+        }
+        /*로그인창*/
+        .login
+        {
+            background-color: #C3C3C3;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            float:left;
+            
+        }
+        /*로그인 버튼*/
+        .loginbutten
+        {
+            text-align: center;
+            float: left;
+        }
+        /*로그인 입력받는곳*/
+        .logininput
+        {
+            width: 95%;
+            margin-bottom: 7px;
+        }
+        /*로그인 글*/
+        .logintext
+        {
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+        }
+        /*광고*/
+        .add
+        {
+            writing-mode: vertical-rl;
+            font-weight: bold;
+            font-size: 50px;
+        }
+>>>>>>> 6fb64e2dd0f5f31d2104047b5441f15995722183
     </style>
 </head>
 
 <body>
-    <head>
+    <header>
         <div class="titlediv">
             <img src="img\DMUIMG.png" class="titleimg">
             <span class="title">웹 프로그래밍 과제</span>
@@ -90,7 +149,19 @@
     <main>
         <iframe src="detail01.html" name="mane" class="mane"></iframe>
     </main>
-    
+    <aside>
+        <div class="inlogin">    
+            <div class="login">
+                <p class="logintext">로그인창</p>
+                <input class="logininput" placeholder="아이디">
+                <input class="logininput" type="password" placeholder="비밀번호">
+                <button class="loginbutten">로그인</button>
+            </div>
+            <div class="add">
+                <a href="https://www.dongyang.ac.kr/" target="_blank"> 대충 학교 홍보하는글 </a>
+            </div>
+        </div>
+    </aside>
     
 </body>
 </html>
