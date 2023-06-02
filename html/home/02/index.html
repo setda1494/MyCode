@@ -17,6 +17,7 @@
             line-height : 100px;
             margin-left: 10px;
             text-shadow: 2px 2px 4px darkgray ;
+            
         }
         /*내 정보*/
         .titlemyinfo
@@ -28,6 +29,7 @@
         {
             height: 100px;
             margin-bottom: 15px;
+            background-color: ;
         }
         /*제목 이미지 css*/
         .titleimg
@@ -81,7 +83,6 @@
             width: 10%;
             height: 860px;
             border: 1px dotted black;
-            
         }
         /*로그인창*/
         .login
@@ -91,7 +92,6 @@
             border: 1px solid black;
             border-radius: 5px;
             float:left;
-            
         }
         /*로그인 버튼*/
         .loginbutten
@@ -118,18 +118,25 @@
             font-weight: bold;
             font-size: 50px;
         }
+        .addScreenCSS
+        {
+            width: auto;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <header>
+        <!-- 제목 -->
         <div class="titlediv">
-            <img src="img\DMUIMG.png" class="titleimg">
+            <img src="img\DMUIMG.svg" class="titleimg">
             <span class="title">웹 프로그래밍 과제</span>
             <span class="titlemyinfo">학번 : 20231549 이름 : 최승주</span>
         </div>
     </head>
     <nav>
+        <!-- 목록 -->
         <div class="manu">
             <p class="manutitle">목록</p>
             <ul class="testboder">
@@ -142,10 +149,13 @@
         </div>
     </nav>
     <main>
+        <!-- 내용 -->
         <iframe src="detail01.html" name="mane" class="mane"></iframe>
     </main>
     <aside>
-        <div class="inlogin">    
+        
+        <div class="inlogin">
+            <!-- 로그인창 -->    
             <div class="login">
                 <p class="logintext">로그인창</p>
                 <input class="logininput" placeholder="아이디">
@@ -153,8 +163,8 @@
                 <button class="loginbutten">로그인</button>
             </div>
             <div class="add">
-                <a href="https://www.dongyang.ac.kr/" target="_blank"> 대충 학교 홍보하는글 </a>
-                <!-- 동미대 포스터 이미지 만들기 -->
+                <!-- 광고창 -->
+                <iframe src="add.html" name="addScreen" class="addScreenCSS"></iframe>
             </div>
         </div>
     </aside>
