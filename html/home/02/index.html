@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>home</title>
     <style>
+        .testboder
+        {
+            border: 1px solid black;
+        }
         /*제목 css*/
         .title 
         {
@@ -31,15 +35,14 @@
             width: auto;
             height: 100px;
         }
-        /*메뉴 이름 css*/
+        /*목록 이름 css*/
         .manutitle
         {
             font-weight: bold;
             font-size: 25px;
             text-align: center;
-            
         }
-        /*메뉴 목록 css*/
+        /*목록 목록 css*/
         .manu
         {
             width: 10%;
@@ -47,22 +50,30 @@
             border: 1px dotted black;
             height: 860px;
         }
+        /*목록 정열 css*/
+        li
+        {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            list-style:none ;
+        }
+        /* 목록 링크 및줄 삭제*/
+        li a
+        {
+            text-decoration-line: none;
+            text-align: center;
+        }
+
         /*메인 내용 css*/
         .mane
         {
             width: 79%;
             float: left;
             border: 0px solid black;
-            height: 860px
+            height: 860px;
         }
         
-        /*메뉴 정열 css*/
-        li
-        {
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 10px;            
-        }
         /*로그인 창이 포함되있는 창*/
         .inlogin
         {
@@ -121,8 +132,8 @@
     <nav>
         <div class="manu">
             <p class="manutitle">목록</p>
-            <ul>
-                <li><a href="" target="mane">목록</a></li>
+            <ul class="testboder">
+                <li><a href="" target="mane" class="">인공지능 의 정의</a></li>
                 <li><a href="" target="mane">목록</a></li>
                 <li><a href="" target="mane">목록</a></li>
                 <li><a href="" target="mane">목록</a></li>
