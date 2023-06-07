@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            제목
+        </title>
+        <style>
+            ul li
+            {
+                margin: 10px;
+            }
+            li.hot::after
+            {
+                content: "hot";
+                font-size: x-small;
+                padding: 2px 4px;
+                border-radius: 4px;
+                background-color: red;
+                color: white;
+            }
+        </style>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <ul>
+            <li class="hot">제품a</li>
+            <li >제품b</li>
+            <li >제품c</li>
+            <li class="hot">제품d</li>
+        </ul>
+    </body>
+</html>
