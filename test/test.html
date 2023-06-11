@@ -1,39 +1,185 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
-<script type="text/javascript">
-    var index = 0;   //이미지에 접근하는 인덱스
-    window.onload = function(){
-        slideShow();
-    }
-    time = 3 * 1000;// 시간 변수
-    function slideShow() 
-    {
-        var i;
-        var x = document.getElementsByClassName("slide1");  //slide1에 대한 dom 참조
-        for (i = 0; i < x.length; i++) 
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        .testboder
         {
-           x[i].style.display = "none";   //처음에 전부 display를 none으로 한다.
+            border: 1px solid black;
         }
-        index++;
-        if (index > x.length) 
+        /*제목 css*/
+        .title 
         {
-            index = 1;  //인덱스가 초과되면 1로 변경
-        }   
-        x[index-1].style.display = "block";  //해당 인덱스는 block으로
-        setTimeout(slideShow, time);   //함수를 3초마다 호출
-    }
-</script>
-<style>
-
-</style>
+            font-weight: bold;
+            font-size: 35px;
+            position: absolute;
+            line-height : 100px;
+            margin-left: 10px;
+            text-shadow: 2px 2px 4px darkgray ;
+            
+        }
+        /*내 정보*/
+        .titlemyinfo
+        {
+            margin-left: 10px;
+        }
+        /*제목 상자 css*/
+        .titlediv
+        {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        /*제목 이미지 css*/
+        .titleimg
+        {
+            width: auto;
+            height: 100px;
+        }
+        /*목록 이름 css*/
+        .manutitle
+        {
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+        /*목록 목록 css*/
+        .manu
+        {
+            width: 10%;
+            float: left;
+            border: 1px dotted black;
+            height: 860px;
+        }
+        /*목록 정열 css*/
+        li
+        {
+            margin-left: -35px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            list-style:none ;
+        }
+        /* 목록 링크 및줄 삭제*/
+        li a
+        {
+            text-decoration-line: none;
+            text-align: center;
+        }
+        /*메인 내용 css*/
+        .mane
+        {
+            width: 79%;
+            float: left;
+            border: 0px solid black;
+            height: 860px;
+        }
+        
+        /*로그인 창이 포함되있는 창*/
+        .inlogin
+        {
+            float: right;
+            width: 10%;
+            height: 860px;
+            border: 1px dotted black;
+        }
+        /*로그인창*/
+        .login
+        {
+            background-color: #C3C3C3;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            float:left;
+        }
+        /*로그인 버튼*/
+        .loginbutten
+        {
+            text-align: center;
+            float: left;
+        }
+        /*로그인 입력받는곳*/
+        .logininput
+        {
+            width: 95%;
+            margin-bottom: 5px;
+        }
+        /*로그인 글*/
+        .logintext
+        {
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+        }
+        /* 비밀번호 찾기 */
+        .links 
+        {
+            text-align: center;
+            font-size: smaller;
+        }
+        /*광고*/
+        .add
+        {
+            font-weight: bold;
+            font-size: 50px;
+        }
+        .addScreenCSS
+        {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        <img class="slide1" src="img\test01.png" >
-        <img class="slide1" src="img\test02.png">
-        <img class="slide1" src="img\test03.png">
-    </div>
+    <header>
+        <!-- 제목 -->
+        <div class="titlediv">
+            <img src="img\DMUIMG.svg" class="titleimg">
+            <span class="title">웹 프로그래밍 과제</span>
+            <span class="titlemyinfo">학번 : 20231549 이름 : 최승주</span>
+        </div>
+    </head>
+    <nav>
+        <!-- 목록 -->
+        <div class="manu">
+            <p class="manutitle">목록</p>
+            <ul class="testboder">
+                <li><a href="detail01.html" target="mane" class="">인공지능 의 정의</a></li>
+                <li><a href="detail02.html" target="mane" class="">강인공지능 과 <br>약 인공지능</a></li>
+                <li><a href="detail03.html" target="mane">역사</a></li>
+                <li><a href="detail04.html" target="mane">미래 전망</a></li>
+                <li><a href="detail05.html" target="mane">인공지능 기술 응용</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- 내용 -->
+        <iframe src="detail01.html" name="mane" class="mane"></iframe>
+    </main>
+    <aside>
+        <div class="inlogin">
+            <!-- 로그인창 -->
+            <div class="login">
+                <br>
+                <!-- 아이디/비밀번호 입력 -->
+                <form>
+                    <input type="text" name="email" class="logininput" placeholder="아이디">
+                    <input type="password" name="password" class="logininput" placeholder="비밀번호">
+                    <input type="submit" value="로그인" class="loginbutten">
+                </form>
+                <!-- 비밀번호 찾기 -->
+                <div class="links">
+                    <br><br>
+                    <a href="#">비밀번호를 잊어버리셨나요?</a>
+                </div>
+            </div>
+            <div class="add">
+                <!-- 광고창 -->
+                <iframe src="add.html" name="addScreen" class="addScreenCSS"></iframe>
+            </div>
+        </div>
+    </aside>
+    
 </body>
 </html>
