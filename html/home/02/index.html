@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>index</title>
     <style>
-
+        /* 테스트용 */
         .testboder
         {
             border: 1px solid black;
+        }
+        /* BG */
+        .BG
+        { 
+            background: linear-gradient( #a3a1a1,#8b8687,#8b8687,#333030)
         }
         /*제목 css*/
         .title 
@@ -24,13 +29,12 @@
         .titlemyinfo
         {
             margin-left: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
         /*제목 상자 css*/
         .titlediv
         {
             height: 120px;
-            margin-bottom: 15px;
             border-radius: 5px;
             background-color: #a3a1a1;
             color: white;
@@ -55,8 +59,8 @@
             height: 860px;
             float: left;
             border: 1px dotted black;
-            border-radius: 10px;            
-            background-color: #8b8687;
+            border-radius: 10px;
+            background: linear-gradient( #a3a1a1,#8b8687,#8b8687,#333030);
             color: white;
         }
         /*목록 정열 css*/
@@ -86,6 +90,7 @@
             float: left;
             border: 0px solid black;
             height: 860px;
+            background: linear-gradient( #a3a1a1,#8b8687,#8b8687,#333030);
         }
         
         /*로그인 창이 포함되있는 창*/
@@ -95,7 +100,7 @@
             width: 10%;
             height: 860px;
             border: 1px dotted black;
-            background-color:#8b8687 ;
+            background: linear-gradient( #a3a1a1,#8b8687,#8b8687,#333030);
             border-radius: 10px;
         }
         /*로그인창*/
@@ -156,7 +161,7 @@
     </style>
 </head>
 
-<body>
+<body class="class=BG">
     <header>
         <!-- 제목 -->
         <div class="titlediv">
@@ -180,7 +185,7 @@
             
         </div>
     </nav>
-    <main>
+    <main class="BG">
         <!-- 내용 -->
         <iframe src="detail01.html" name="mane" class="mane"></iframe>
     </main>
