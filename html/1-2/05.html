@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            05(typeof)
+        </title>
+        <style>
+            
+        </style>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            let nickname = "setda1494";
+            let pi = 3.14;
+            let f;
+            let ac = true;
+            let trans = Number(nickname); 
+            let bol = 52 == "52";
+            const bu = "040222";
+
+            document.write("자료형<br>");
+            document.write("---------------------<br>");
+            document.write("1:"+typeof(nickname)+"<br>");
+            document.write("2:"+typeof(pi)+"<br>");
+            document.write("3:"+typeof(f)+"<br>");
+            document.write("4:"+typeof(ac)+"<br>");
+            document.write("---------------------<br>")
+            document.write("형변환<br>");
+            nickname = Number(nickname);
+            document.write("1:"+typeof(nickname)+"<br>");
+            document.write("2:"+typeof(trans)+"<br>");
+            document.write("---------------------<br>");
+            document.write("등호<br>");
+            document.write("2:"+typeof(bol)+" "+bol+"<br>");
+            document.write("---------------------<br>");
+            document.write(bu+"<br>");
+        </script>
+    </body>
+</html>

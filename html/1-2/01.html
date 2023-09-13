@@ -1,0 +1,54 @@
+<html lang="ko">
+    <head>
+        <title>
+            01(구구단)
+        </title>
+        <style>
+            
+        </style>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>집가고 싶다</h1>
+        <br>
+        <p>입력 받은 구구단</p>
+        <script>
+            // let name = "최승주"
+            // let num = 10
+            let c
+            let re
+            // document.write("typename = " + typeof(num));
+            // document.write("집가고 싶은사람 "+name);
+            // document.write("집가고 싶다 ");
+            var b = prompt("몇단? ");
+            console.log;
+            
+            for (let a = 1; a < 10; a++) {
+                c = b*a
+                document.write(b +"*"+ a + "=" + c+"<br>");
+                console.log("for 문 " + a + "번 돌음" + "결과 값은" + b +"*"+ a + "=" + c+"<br>");
+            }
+            document.write("<br>")
+            for (let dan = 1; dan < 10; dan++) {
+                document.write("구구단 "+dan+"단")
+                for (let dan1 = 1; dan1 < 10; dan1++) 
+                {
+                    re = dan*dan1
+                    document.write(dan +"*"+ dan1 + "=" + re+"<br>");
+                }
+            }
+            document.write("<br>")
+            for (let dan1 = 1; dan1 < 10; dan1++) 
+            {
+                for (let dan = 1; dan < 10; dan++) 
+                {
+                    re = dan*dan1
+                    document.write(dan1 +"*"+ dan + "=" + re + " ");
+                }
+                document.write("<br>")
+            }
+        </script>
+        <br>
+        <h1>집가고 싶다</h1>
+    </body>
+</html>
