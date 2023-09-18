@@ -1,0 +1,4 @@
+﻿  ConsoleApplication10.c
+C:\Users\GBOOK\Documents\GitHub\MyCode\C\ConsoleApplication\ConsoleApplication10\ConsoleApplication10\ConsoleApplication10.c(2,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+C:\Users\GBOOK\Documents\GitHub\MyCode\C\ConsoleApplication\ConsoleApplication10\ConsoleApplication10\ConsoleApplication10.c(2,1): message : 이전에 명령줄에서 선언된 '_CRT_SECURE_NO_WARNINGS'
+  ConsoleApplication10.vcxproj -> C:\Users\GBOOK\Documents\GitHub\MyCode\C\ConsoleApplication\ConsoleApplication10\x64\Debug\ConsoleApplication10.exe
