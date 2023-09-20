@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 0;
+        }
+        h3 {
+            color: blue;
+        }
+        span {
+            font-weight:bold;
+            color: red;
+            font-size: 16pt;
+        }
+        .font {
+            color: green;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <h3>Date 객체 생성과 초기화</h3>
+        <script>
+          time1 = new Date();
+          document.write("let time1 =new <span>Date() ;</span><br>");
+          document.write("let time2 =new <span>Date(년,월-1,일) ;</span><br>");
+          document.write("let time3 =new <span>Date(년,월-1,일,시,분,초) ;</span><br>");           
+        </script>        
+        <h3>Date 객체의 주요 method</h3>
+        <li><span class="font">getFullYear( ): </span>
+            연도를 구하는 메소드
+        </li>
+        <li><span class="font">getMonth( ) :</span> 
+             월을 구하는 메소드(배열로저장되어 시작인덱스 0)  </li>
+        <li><span class="font">getDate( ) :</span>
+            일자를 구하는 메소드        </li>
+        <li><span class="font">getDay( ) :</span>
+            요일을 구하는 메소드        </li>
+        <li><span class="font">getHour( ) :</span>
+            시간을 구하느 메소드        </li>
+        <li><span class="font">getMinutes( ):</span>
+            분을 구하는 메소드        </li>
+        <li><span class="font">getSeconds( ) :</span>
+            초를 구하는 메소드 </li>
+            <a href = "datebg.html">배경색변경하기</a> /
+            <a href = "dateex.html">날짜구하기</a>
+        <hr>
+        <li><span class="font">setYear( ): </span>
+            연도를 정하는 메소드 </li>
+        <li><span class="font">setMonth( ) :</span> 
+             월을 정하는 메소드(배열로저장되어 시작인덱스 0)  </li>
+        <li><span class="font">setDate( ) :</span>
+            일자를 정하는 메소드        </li>
+        <li><span class="font">setDay( ) :</span>
+            요일을 정하는 메소드        </li>
+        <li><span class="font">setHour( ) :</span>
+            시간을 정하느 메소드        </li>
+        <li><span class="font">setMinutes( ):</span>
+            분을 정하는 메소드        </li>
+        <li><span class="font">setSeconds( ) :</span>
+            초를 정하는 메소드        </li>
+        <br>
+        <li><span class="font">setInterval( ) :</span>
+            일정간격으로 호출하는 메소드        </li>
+        <li><span class="font">clearTimeout( ) :</span>
+            초를 정하는 메소드        </li>
+    </ol>
+</body>
+</html>

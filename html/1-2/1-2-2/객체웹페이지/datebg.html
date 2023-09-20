@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    function bgchange(){        
+      let day = new Date();        
+        let times=day.getSeconds();
+        document.write("형제 초:"+times);
+        if(times <=20)
+            document.write("<body bgcolor ='yellow'>");
+        else if(times <=35)
+            document.write("<body bgcolor ='blue'>");
+        else if(times <=45)
+            document.write("<body bgcolor ='red'>");
+        else
+            document.write("<body bgcolor ='green'>");
+    }
+    </script>
+</head>
+<body>
+   <input type="button" value = "배경색" onclick="bgchange()">
+</body>
+</html>

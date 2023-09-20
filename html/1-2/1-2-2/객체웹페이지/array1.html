@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 0;
+        }
+        h3 {
+            color: blue;
+        }
+        span {
+            color: red;
+            font-size: 16pt;
+        }
+        .font {
+            color: green;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <h3>배열 객체 생성과 초기화</h3>
+        <script>
+            txt = new Array(6);
+            document.write("<h4>txt =new <span>Array(6) ;</span></h4>");
+            txt[0] = "sumday";
+            txt[1] = "monday";
+            txt[2] = "tuesday";
+            txt[3] = "wednesday";
+            txt[4] = "thursday";
+            txt[5] = "friday";
+            txt[6] = "saturday";
+            for (i = 0; i < txt.length; i++) {
+                document.write("txt[" + i + "]=" + txt[i] + "<br>");
+            }
+        </script>        
+        <h3>Array method</h3>
+        <li><span class="font">join("구분자")</span><br>
+            <script>
+                document.write(txt.join("/ ") + "<br>");
+            </script>
+        </li>
+        <li><span class="font">reverse( ) 역순</span> <br>
+            <script>
+                document.write(txt.reverse() + "<br>");
+            </script>
+        </li>
+        <li><span class="font">sort( ) 정렬</span><br>
+            <script>
+                document.write(txt.sort() + "<br>");
+            </script>
+        </li>
+        <li><span class="font">slice()일부범위선택:txt.slice(0,2) </span>
+            <script>               
+                document.write("slice함수 적용후 <br>");
+                result = txt.slice(0,2);
+                for(i = 0; i<result.length; i++)
+                    document.write(result[i]+ " ")
+                document.write("<br>");
+            </script>
+        </li>
+    </ol>
+</body>
+
+</html>

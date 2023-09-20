@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 날짜정보</title>
+</head>
+<body>
+    <script>
+   let  Today = new Date();
+        let year=Today.getFullYear();
+        document.write("year:"+year+"<br>");
+        let month=Today.getMonth()+1;
+        let date =Today.getDate();
+        document.write("<h4>오늘 날짜:");
+        document.write(year+"년"+month+"월"+date+"일<br>");        
+        let hour =Today.getHours();
+        let minute =Today.getMinutes();
+        let second =Today.getSeconds();
+        document.write("현재시간:");
+        document.write(hour+"시"+minute+"분"+second+"초</h4>");        
+    </script>
+</body>
+</html>

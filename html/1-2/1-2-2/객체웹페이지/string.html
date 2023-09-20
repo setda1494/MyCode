@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 0;
+        }
+        h4 {
+            color: blue;
+        }
+        span {
+            color: red;
+            font-size: 16pt;
+        }
+        .font {
+            color: green;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        .border {
+            border: 2pt dotted red;
+            width: 150pt;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="border">String객체 </h3>
+    <script>
+        var hello = new String("hello");
+        document.write("<h4>hello = new <span>String('hello') ;</span><br>hello =  <span>'hello' ;</span></h4>");
+    </script>
+    <ol>
+        <li>
+            <h4>Sting 특징:자바스크립트에서 문자열을 다루는 객체 </h4>
+            <ul>
+                <li>생성된 문자열은 수정불가</li>
+                <li>속성:length</li>
+            </ul>
+        </li>
+        <li>
+            <h4>Sting method</h4>
+        </li></ol>
+        <ul>
+            <li><span class="font">hello.charAt(index)</span><br>
+                <script>
+                    document.write(hello.charAt(0) + " : 0인덱스의 문자를 문자열로 만들어 리턴<br>");
+                </script>
+            </li>
+            <li><span class="font">hello.charCodeAt( ) </span> <br>
+                <script>
+                    document.write(hello.charCodeAt(0) + " : 0인덱스의 문자를 유니코드값을 리턴<br>");
+                </script>
+            </li>
+            <li><span class="font">hello.concat("hi","you" ) </span><br>
+                <script>
+                    document.write(hello.concat("hi", "you") + " : 순서대로 요소들을 연결한 문자열을 리턴함 <br>");
+                </script>
+            </li>
+            <li><span class="font">hello.index( ) </span></li>
+            <li><span class="font">replace(a,b) </span></li>
+            <li><span class="font">slice()</span></li>
+            <li><span class="font">split() </span></li>           
+        </ul>  
+</body>
+</html>
