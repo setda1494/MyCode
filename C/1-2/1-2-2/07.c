@@ -5,31 +5,33 @@ void main()
 {
     /*
     start
-        rede(x)
-        if(0 < x)
-            print("positive")
-        if(x < 0)
-            print("negative")
-        if(x == 0)
-            print(zero)
+        read(x,y)
+        if(x==0)
+        {
+            print("error")
+        }
+        else
+        {
+            quot = x/y
+        }
+        print(puot)
     end
     */
 
     int x;
+    int y;
+    int quot;
 
     printf("숫자를 입력 하시오");
-    scanf("%d", &x);
+    scanf("%d%d", &x,&y);
 
     if (x == 0)
     {
-        printf("zero");
+        printf("error");
     }
-    if (x < 0)
+    else
     {
-        printf("positive");
+        quot = x/y;
     }
-    if (0 < x)
-    {
-        printf("negative");
-    }
+    printf("%d",quot);
 }

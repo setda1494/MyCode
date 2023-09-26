@@ -5,25 +5,31 @@ void main()
 {
     /*
     start
-        read(num)
-        while(num >0)do
-            r = num%10
-            print(r)
-            num = num/10
-        endwhile
+        rede(x)
+        if(0 < x)
+            print("positive")
+        if(x < 0)
+            print("negative")
+        if(x == 0)
+            print(zero)
     end
     */
 
-    int num;
-    int r;
+    int x;
 
     printf("숫자를 입력 하시오");
-    scanf("%d", &num);
+    scanf("%d", &x);
 
-    while (num < 0)
+    if (x == 0)
     {
-        r = num % 10;
-        printf("%d", r);
-        num / 10;
+        printf("zero");
     }
-}   
+    if (x < 0)
+    {
+        printf("positive");
+    }
+    if (0 < x)
+    {
+        printf("negative");
+    }
+}

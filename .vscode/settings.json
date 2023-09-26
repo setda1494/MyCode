@@ -7,6 +7,7 @@
     "files.associations": {
         "stdio.h": "c",
         "cmath": "c",
-        "05.C": "cpp"
+        "05.C": "cpp",
+        "04.C": "cpp"
     }
 }

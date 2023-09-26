@@ -5,34 +5,25 @@ void main()
 {
     /*
     start
-        count = 0
-        rede(n)
-        while(count < n) do
-            read(data)
-            sum = sum + data
-            count+1
-        endwhil
-        avg = sum/n
-        print(sum,avg)
+        read(num)
+        while(num >0)do
+            r = num%10
+            print(r)
+            num = num/10
+        endwhile
     end
     */
 
-    int count;
-    int n;
-    int data;
-    int sum;
-    int avg;
+    int num;
+    int r;
 
-    printf("반복할 횟수를 알려 주시오");
-    scanf("%d", &n);
-    while (count < n + 1)
+    printf("숫자를 입력 하시오");
+    scanf("%d", &num);
+
+    while (num < 0)
     {
-        printf("데이터를 입력해 주시오");
-        scanf("%d", &data);
-        sum = sum +data;
-        count ++;
+        r = num % 10;
+        printf("%d", r);
+        num / 10;
     }
-    avg = sum / n;
-    printf("sum = %d , avg = %d" ,sum, avg);
-
-}
+}   
