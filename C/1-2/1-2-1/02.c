@@ -6,7 +6,7 @@ void main()
     int a;
     char b;
     char ch1 = 120;
-    char ch2 = 120;
+    char ch2 = 120; 
     char ch3 = ch1 + ch2;
 
     printf("sizeof (a) =%d,sizeof (b) =%d\n", sizeof(a), sizeof(b));
