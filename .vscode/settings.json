@@ -8,7 +8,12 @@
     "stdio.h": "c",
     "cmath": "c",
     "05.C": "cpp",
-    "04.C": "cpp"
+    "04.C": "cpp",
+    "format": "c",
+    "initializer_list": "c",
+    "type_traits": "c",
+    "xstring": "c",
+    "xutility": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

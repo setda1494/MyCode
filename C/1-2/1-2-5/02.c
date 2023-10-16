@@ -1,3 +1,6 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
 bool Insert( int index, int value )
 {
     bool bRet = false;
