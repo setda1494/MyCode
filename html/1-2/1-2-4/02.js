@@ -1,8 +1,10 @@
 let product =
 {
     name : "banana",
-    prise : 1200
+    prise : 1200,
+    
 }
+
 console.log("한번에 하나씩1(내가 직접침)");
 console.log(product.name);
 console.log(product.prise);

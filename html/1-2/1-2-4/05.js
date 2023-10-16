@@ -1,37 +1,34 @@
-let products1 = 
-{//객체
-    {name:`apple`, prise:1000},
-    {name:`banans`, prise:1200},
-    {name:`mango`, prise:3000}
-};
-let products2 = 
-[{//배열
-    
-    {
-        name:`apple`, 
-        prise:1000,
-        print:function()
-        {
-            console.log(`${this.name}${this.prise}`)
-        }
-    },
-    {
-        name:`banans`, 
-        prise:1200,
-        print:function()
-        {
-            console.log(`${this.name}${this.prise}`)
-        }
-    },
-    {
-        name:`mango`, 
-        prise:3000,
-        print:function()
-        {
-            console.log(`${this.name}${this.prise}`)
-        }
-    },
-    
+let products1 = [
+    { name: 'apple', price: 1000 },
+    { name: 'bananas', price: 1200 },
+    { name: 'mango', price: 3000 }
+];
 
-}];
-products2.print
+let products2 = [
+    {
+        name: 'apple',
+        price: 1000,
+        print: function() 
+        {
+            console.log(`${this.name} ${this.price}`);
+        }
+    },
+    {
+        name: 'bananas',
+        price: 1200,
+        print: function() 
+        {
+            console.log(`${this.name} ${this.price}`);
+        }
+    },
+    {
+        name: 'mango',
+        price: 3000,
+        print:function() 
+        {
+            console.log(`${this.name} ${this.price}`);
+        }
+    }
+];
+
+products2.forEach(product => product.print());
