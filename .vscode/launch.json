@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/GBOOK/Documents/GitHub/MyCode/C/1-2/1-2-6",
-      "program": "c:/Users/GBOOK/Documents/GitHub/MyCode/C/1-2/1-2-6/build/Debug/outDebug",
+      "cwd": "c:/Users/GBOOK/Documents/GitHub/MyCode/C/1-2/1-2-5",
+      "program": "c:/Users/GBOOK/Documents/GitHub/MyCode/C/1-2/1-2-5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
