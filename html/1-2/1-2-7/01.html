@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #myButton {
+      width: 100px;
+      height: 50px;
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<button id="myButton" onclick="changeBackgroundColor()">색 바뀜</button>
+
+<script>
+  function changeBackgroundColor() {
+    var body = document.querySelector('body');
+    body.style.backgroundColor = 'red';
+  }
+</script>
+
+</body>
+</html>
