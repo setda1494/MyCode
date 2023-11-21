@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hoverable {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<p class="hoverable" onmouseover="changeBackgroundColor(this)">마우스를 올려보세요.</p>
+
+<script>
+  function changeBackgroundColor(element) {
+    element.style.backgroundColor = 'red';
+  }
+</script>
+
+</body>
+</html>
