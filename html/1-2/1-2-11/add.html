@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+            제목
+        </title>
+        <style>
+            .box 
+            {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+            .highlight {  /* highlight 클래스 스타일 정의 */
+            color: red;
+            font-weight: bold;
+            }   
+        </style>
+        <script>
+            function Change(element, fontSize, color) {  /* 버튼과 텍스트의 스타일 변경 함수 */
+                element.style.fontSize = fontSize;
+                element.style.color = color;
+                
+                var text = document.getElementById("content");
+                text.style.color = "orange";
+            }
+            
+            function ChangeIMG()  /* 이미지 추가 함수 */
+            {
+                var img = document.createElement("img");
+                img.src = "img/dog.jpeg";
+                
+                var targetElement = event.target;
+                targetElement.innerHTML = "<img src='" + img.src + "'> " + targetElement.innerHTML;
+            }
+
+            function changeCSS1()  /* 박스 색 변경 함수 */
+            {
+                var boxElement = document.querySelector(".box");
+                boxElement.style.backgroundColor = "blue";
+            }
+
+            function changeCSS2()  /* 텍스트 스타일 변경 함수 */
+            {
+                var textSpan = document.getElementById("textSpan");
+                textSpan.classList.toggle("highlight");
+            }
+
+            function openNewWindow()  /* 새 창 열기 함수 */
+            {
+                var htmlContent = `
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <title>새 윈도우</title>
+                    </head>
+                    <body>
+                    <h1>새 윈도우에서 출력되는 HTML 문서입니다.</h1>
+                    <p>원하는 내용을 자유롭게 작성할 수 있습니다.</p>
+                    </body>
+                    </html>
+                `;
+
+                var newWindow = window.open("", "_blank");
+                newWindow.document.write(htmlContent);
+                newWindow.document.close();
+            }
+
+            window.onload = function()  /* 페이지 로드 완료 후 이벤트 리스너 추가 */
+            {
+                var changeButton1 = document.getElementById("changeButton1");
+                changeButton1.addEventListener("click", changeCSS1);
+
+                var changeButton2 = document.getElementById("changeButton2");
+                changeButton2.addEventListener("click", changeCSS2);
+            }
+        </script>
+        
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button onclick="Change(this, '20px', 'red')">버튼 1</button>  <!-- 버튼 클릭 시 스타일 변경 -->
+        <button onclick="Change(this, '20px', 'blue')">버튼 2</button>  <!-- 버튼 클릭 시 스타일 변경 -->
+        <p id="content">우리는 민족 중흥에 역사적</p>
+        <hr>
+        <p onclick="ChangeIMG()">강아지</p>  <!-- 클릭 시 이미지 추가 -->
+        <hr>
+        <button id="changeButton1">CSS 변경</button>  <!-- 버튼 클릭 시 박스 색 변경 -->
+        <div class="box"></div>
+        <hr>
+        <button id="changeButton2">CSS 변경</button>  <!-- 버튼 클릭 시 텍스트 스타일 변경 -->
+        <p>
+            이 텍스트에는 <span id="textSpan" class="highlight">스팬 태그</span>가 있습니다.
+        </p>
+        <hr>
+        <h1>새 윈도우에서 HTML 문서 출력하기</h1>
+        <button onclick="openNewWindow()">새 윈도우 열기</button>  <!-- 버튼 클릭 시 새 창 열기 -->
+        <hr>
+    </body>
+</html>
