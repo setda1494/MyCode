@@ -110,8 +110,6 @@ void main()
 
 }
 
-
-
-//전위 A B D E F G C H I J K
-//중위 D B F E G A H J I K C
-//후위 D G F E B J J I K H C A
+//전위 A B D E F G C H I J K 
+//중위 D B E F G A C H I J K
+//후위 D G F E B J I K H C A
