@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            init
+        </title>
+        <style>
+            
+        </style>
+        <script>
+            let p;
+            function init() {
+                p = document.getElementById("p");
+                p.addEventListener("mouseover",over);
+                p.addEventListener("mouseiut",out);
+                p.onmouseover = function () {
+                    this.style.backgroundColor = "block";
+                }
+                p.addEventListener("mouseout",
+                function () {
+                this.style.backgroundColor = "yellow";
+                }
+                )
+            }
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body onload="init()">
+        <h3>리스너 틍록</h3>
+        <hr>
+        <p id="p">마우스올리면</p>
+    </body>
+</html>
