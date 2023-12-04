@@ -8,14 +8,14 @@ int front = -1;
 int rear = -1;
 
 
-typedef struct vertex *vertex_pointer;
+typedef struct vertex* vertex_pointer;
 struct vertex
 {
 	int vertex_num;
 	vertex_pointer link;
 };
 vertex_pointer graph[MAX_V];
-int already_visited[MAX_V] = { 0, };
+int already_visited[MAX_V] = { 0 };
 
 
 void dfs(int s)
@@ -34,9 +34,9 @@ void dfs(int s)
 
 void addq(int s)
 {
-	if (rear == MAX_V)
+	if (rear == MAX_V - 1)
 	{
-		printf("입력 불가\n");
+		printf("입력 불가");
 	}
 	else
 		queue[++rear] = s;
@@ -46,7 +46,8 @@ int deletedq()
 {
 	if (front == rear)
 	{
-		printf("비어있는 큐\n");
+		printf("비어있는 큐");
+		return -1; // 큐가 비어있을 때 처리
 	}
 	else
 		return queue[++front];
@@ -54,7 +55,7 @@ int deletedq()
 
 bool check_continue()
 {
-	if (front == rear)
+	if (front == -1 && rear == -1)
 	{
 		return true;
 	}
@@ -86,9 +87,9 @@ void bfs(int s)
 	}
 }
 
-void Edge(vertex_pointer *G, int Hu, int lv)
+void Edge(vertex_pointer* G, int Hu, int lv)
 {
-	vertex_pointer temp = (vertex_pointer)malloc(sizeof(vertex_pointer));
+	vertex_pointer temp = (vertex_pointer)malloc(sizeof(struct vertex));
 	temp->vertex_num = lv;
 	temp->link = G[Hu]->link;
 	G[Hu]->link = temp;
@@ -97,27 +98,25 @@ void Edge(vertex_pointer *G, int Hu, int lv)
 int connected()
 {
 	int v, cnum = 0;
-	for (v = 0; v < MAX_V-1; v++)
+	for (v = 0; v < MAX_V; v++) // 수정된 부분
 	{
 		if (already_visited[v] == 0)
 		{
 			dfs(v);
 			cnum++;
-			printf("\n");
-			printf("",cnum);
+			printf("연결 요소 %d의 개수: ", cnum); // 수정된 부분
 		}
 	}
 	return cnum;
 }
 
-
 int main()
 {
 	for (int i = 0; i < MAX_V; i++)
 	{
-		graph[i] = (vertex_pointer)malloc(sizeof(vertex_pointer));
+		graph[i] = (vertex_pointer)malloc(sizeof(struct vertex));
 		graph[i]->vertex_num = i;
-		graph[i]->link=NULL;
+		graph[i]->link = NULL;
 	}
 	// p.288 7-14그림
 	Edge(graph, 7, 8);
@@ -129,20 +128,20 @@ int main()
 	Edge(graph, 0, 1);
 	Edge(graph, 0, 2);
 	Edge(graph, 0, 3);
-	
 
-	printf("DFS(깊이 우선 탐색)\n");
+
+	printf("DFS(깊이 우선 탐색)");
 	dfs(0);
-	printf(" END\n\n");
+	printf(" END");
 
 	for (int i = 0; i < MAX_V; i++)
 	{
 		already_visited[i] = 0;
 	}
 
-	//printf("BFS(너비 우선 탐색)\n");
-	//bfs(0);
-	//printf("END\n\n");
+	printf("BFS(너비 우선 탐색)");
+	bfs(0);
+	printf("END");
 
 	int c = connected();
 	printf("연결요소는 %d", c);
