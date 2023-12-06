@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            shhowAndHiden
+        </title>
+        <style>
+            
+        </style>
+        <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#btn2").click(function () { // 버튼 id를 제대로 선택할 수 있도록 수정
+                    $("figure").hide(1000); // figure 요소를 숨기도록 수정
+                });
+                $("#btn1").click(function () { // 버튼 id를 제대로 선택할 수 있도록 수정
+                    $("figure").show(2000); // figure 요소를 보이도록 수정
+                    $("#gallery").css({"border":"2px solid black"});
+                });
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="btn1">보이기</button> <!-- 버튼 텍스트 수정 -->
+        <button id="btn2">숨기기</button> <!-- 버튼 텍스트 수정 -->
+        <div id="gallery">
+            <img src="jquery그림\cat1.jpg" >
+            <figure><b>이 강아지</b>좀 보세요</figure>
+        </div>
+    </body>
+</html>

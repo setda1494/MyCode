@@ -14,14 +14,20 @@
         </script>
         <script>
             $(document).ready(function() {
-            
+                $("#hideBtn").click(function () {
+                    $("#img").hide();
+                });
+                $("#showBtn").click(function () {
+                    $("#img").show();
+                });
             });
         </script>
         <meta charset="UTF-8">
     </head>
     <body>
-        <script>
-            
-        </script>
+        <img src="jquery그림\cat1.jpg" id="img">
+        <br>
+        <button id="hideBtn"> 이미지 삭제</button>
+        <button id="showBtn"> 이미지 생성</button>
     </body>
 </html>

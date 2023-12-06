@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            animated1
+        </title>
+        <style>
+            img {
+                border-radius: 30px;
+            }
+        </style>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#btnleft").click(function() {
+                    $("#snow").animate({marginLeft: "340px"}, 1000);
+                    $("#snow").animate({marginLeft: "0px"}, 1000);
+                });
+                $("#btnrigt").click(function() {
+                    $("#snow").animate({marginLeft: "-340px"}, 1000);
+                    $("#snow").animate({marginLeft: "0px"}, 1000);
+                });
+                $("#btnRL").click(function() {
+                    $("#snow").animate({marginLeft: "+=50"}, 1000);
+                    $("#snow").animate({marginLeft: "-=30px"}, 1000);
+                });
+                $("#btnmi").click(function() {
+                    $("#snow").animate({width: "340px"}, 1000);
+                    $("#snow").animate({height: "240px"}, 1000);
+                    $("#snow").animate({width: "300px"}, 1000);
+                    $("#snow").animate({height: "200px"}, 1000);
+                });
+                $("#snow").click(function() {
+                    $("#snow").animate({marginLeft: "+=50"}, 1000);
+                    $("#snow").animate({marginLeft: "-=30px"}, 1000);
+                });
+                
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <img src="jquery그림\snow.jpg" id="snow" width="300px" height="200px">
+        <br>
+        <b>눈이 와요</b>
+        <br>
+        <button id="btnleft">왼</button>
+        <button id="btnrigt">오</button>
+        <button id="btnRL">좌우</button>
+        <button id="btnmi">크기</button>
+    </body>
+</html>

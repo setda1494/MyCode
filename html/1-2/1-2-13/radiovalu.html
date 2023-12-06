@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            radiovalu
+        </title>
+        <style>
+            
+        </style>
+        <script>
+            function check() {
+                let result = null;
+                let city = document.getElementsByName("city");
+                for (let i = 0; i < city.length; i++) {
+                    if (city[i].checked == true) {
+                        result = city[i];
+                        alert(result.value + "이 선택됨");
+                    }
+                }
+            }
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3></h3>
+        <hr>
+        <form>
+            <input type="radio" name="city" value="서울" checked>서울
+            <input type="radio" name="city" value="부산" >부산
+            <input type="radio" name="city" value="대구" >대구
+            <input type="radio" name="city" value="춘천" >춘천
+            <input type="button" value="클릭" onclick="check()">
+        </form>
+    </body>
+</html>

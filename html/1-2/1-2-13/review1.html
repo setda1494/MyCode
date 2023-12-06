@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>review1</title>
+        <style>
+            ul {
+                list-style: none;
+            }
+            ul li {
+                display: inline;
+                border: 9px solid black;
+            }
+        </style>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#hide').click(function() {
+                    $('p').hide();
+                });
+                $('#show').click(function() {
+                    $('p').fadeIn(1000);
+                });
+                $('*').css("background", "green");
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>회원 모집</h2>
+        <ul>
+            <li id="hide">텍스트 감추기</li>
+            <li id="show">텍스트 보이기</li>
+        </ul>
+        <br><br>
+        <p>주제</p>
+        <p>주제</p>
+        <p>주제</p>
+    </body>
+</html>

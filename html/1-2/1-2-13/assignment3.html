@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            assignment3
+        </title>
+        <style>
+            ul
+            {
+                list-style: none;
+            }
+            .hi
+            {
+                display: inline;
+            }
+        </style>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".hideBtn").click(function () {
+                    $("#hideandshow").hide();
+                });
+                $(".showBtn").click(function () {
+                    $("#hideandshow").show();
+                });
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>내용</h2>
+        <ul>
+            <li class="hi"><button class="hideBtn"> 안보기(button) </button></li>
+            <li class="hi"><button class="showBtn"> 보기(button)</button></li>
+            <li class="hi"><b class="hideBtn" > 안보기(p) </b></li>
+            <li class="hi"><b class="showBtn"> 보기(p) </b></li>
+        </ul>
+        <ul id="hideandshow" hidden>
+            <li>집</li>
+            <li>가</li>
+            <li>고</li>
+            <li>싶</li>
+            <li>다</li>
+        </ul>
+    </body>
+</html>

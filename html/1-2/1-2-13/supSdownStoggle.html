@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            shhowAndHiden
+        </title>
+        <style>
+            
+        </style>
+        <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#sup").click(function () { // 버튼 id를 제대로 선택할 수 있도록 수정
+                    $(".slide").slideUp(1000); // figure 요소를 숨기도록 수정
+                });
+                $("#sdown").click(function () { // 버튼 id를 제대로 선택할 수 있도록 수정
+                    $(".slideDown").slideDown(2000); // figure 요소를 보이도록 수정
+                });
+                $("#stoggle").click(function () { // 버튼 id를 제대로 선택할 수 있도록 수정
+                    $(".slideToggle").slideToggle(2000); // figure 요소를 보이도록 수정
+                });
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="sup">sup</button>  
+        <button id="sdown">sdown</button>  
+        <button id="stoggle">stoggle</button>  
+        <div id="slide">
+            <img src="jquery그림\cat1.jpg" >
+            <figure><b>이 고양이1</b>좀 보세요</figure>
+        </div>
+        <div id="slide">
+            <img src="jquery그림\cat2.jpg" >
+            <figure><b>이 고양이2</b>좀 보세요</figure>
+        </div>
+        <div id="slide">
+            <img src="jquery그림\dog1.jpg" >
+            <figure><b>이 강아지1</b>좀 보세요</figure>
+        </div>
+        <div id="slide">
+            <img src="jquery그림\dog2.jpg" >
+            <figure><b>이 강아지2</b>좀 보세요</figure>
+        </div>
+    </body>
+</html>
