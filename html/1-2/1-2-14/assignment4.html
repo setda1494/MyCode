@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>assignment4</title>
+        <style>
+            div {
+                border-radius: 30px;
+            }
+            .enlarged {
+                width: 300px;
+                transition: transform 0.3s;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var a = 1;
+            var b = 1; 
+            $(document).ready(function() {
+                $("#cat1").click(function() {
+                    if (a % 2 == 0) { 
+                        a++;
+                        $(this).hide();
+                    } else if (a % 2 == 1) { 
+                        a++;
+                        $(this).animate({ width: "+=40" }, 1000);
+                        $(this).animate({ height: "+=40" }, 1000);
+                        $(this).addClass("enlarged");
+                    }
+                    console.log("a의 현재 값: " + a);
+                });
+                $("#cat2").click(function() {
+                    if (b % 2 == 0) { 
+                        b++;
+                        $(this).hide();
+                    } else if (b % 2 == 1) { 
+                        b++;
+                        $(this).animate({ width: "+=40" }, 1000);
+                        $(this).animate({ height: "+=40" }, 1000);
+                        $(this).addClass("enlarged");
+                    }
+                    console.log("b의 현재 값: " + b);
+                });
+
+                $(".show-button").click(function() {
+                    $("img").show();
+                });
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>사진 겔러리</h1>
+        <div>
+            <img src="jquery그림\cat1.jpg" alt="고양이 1" class="enlarged" id="cat1">
+            <img src="jquery그림\cat2.jpg" alt="고양이 2" class="enlarged" id="cat2">
+        </div>
+        <button class="show-button">이미지 보이기</button>
+    </body>
+</html>

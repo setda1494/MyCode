@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            onclickadder
+        </title>
+        <style>
+            
+        </style>
+        <script>
+            function calculate() {
+                let exp = document.getElementById("exp");
+                let result = document.getElementById("result");
+                result.value = eval(exp.value);
+            }
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3></h3>
+        <hr>
+        <form>
+            식:     <input type="text" id="exp" value="">
+            <input type="button" onclick="calculate()" value="계산" size="10">
+            <br>
+            결과:   <input type="text" id="result">
+        </form>
+    </body>
+</html>

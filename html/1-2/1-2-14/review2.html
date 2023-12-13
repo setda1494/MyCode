@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            review2
+        </title>
+        <style>
+            #bg
+            {
+                display: none;
+            }
+        </style>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("button1").click(function() {
+                    $("#big").fadeIn("1000")
+                    $("#small").fadeOut("1000")
+                })
+                $("button2").click(function() {
+                    $("#big").fadeOut("1000")
+                    $("#small").fadeOut("1000")
+                })
+                $("button3").click(function() {
+                    $("#small").fadeOut("1000")
+                    $("#big").fadeIn("1000")
+                })
+                $("button4").click(function() {
+                    $("#big").fadeOut("1000")
+                    $("#small").fadeIn("1000")
+                })
+            });
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <img src="jquery그림\cat1.jpg" id="small" alt="" width="100" height="100">
+        <br>
+        <input type="button" value="이미지     보기" id="button1">
+        <input type="button" value="이미지  안 보기" id="button2">
+        <br>
+        <input type="button" value="크게 보기" id="button3">
+        <input type="button" value="작게 보기" id="button4">
+        <img src="jquery그림\cat1.jpg" id="big" alt="" width="300" height="200">
+    </body>
+</html>

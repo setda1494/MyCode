@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>끝말잇기 게임</title>
+    <style>
+        
+    </style>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script>
+        $(document).ready(function() {
+            let words = [];
+            let players = 0;
+            let currentPlayer = 1; // 현재 차례를 나타내는 변수
+            let isPlayerCountSet = false;
+
+            function playGame() {
+                if (!isPlayerCountSet) {
+                    alert("참가자 수를 먼저 입력해주세요.");
+                    return;
+                }
+
+                let wordInput = document.getElementById("wordInput");
+                let result = document.getElementById("result");
+                let word = wordInput.value;
+
+                if (words.length === 0) {
+                    words.push(word);
+                    result.innerHTML = "시작 단어: " + word;
+                    // players++;
+                } else {
+                    let lastWord = words[words.length - 1];
+                    if (lastWord[lastWord.length - 1] === word[0]) {
+                        words.push(word);
+                        result.innerHTML = "최근 단어: " + word;
+                    } else {
+                        result.innerHTML = "잘못된 단어입니다. 다시 입력해주세요.";
+                        return;
+                    }
+                }
+
+                wordInput.value = "";
+                result.innerHTML += "<br>현재 참가자 수: " + players;
+                result.innerHTML += "<br>참가자 " + currentPlayer + "의 입력: " + word;
+
+                currentPlayer = (currentPlayer % players) + 1; // 다음 참가자로 변경
+                result.innerHTML += "<br>다음 차례: " + currentPlayer + "번째 참가자";
+            }
+
+            $("#wordInput").on("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    playGame();
+                }
+            });
+
+            function inputPlayerCount() {
+                let countInput = document.getElementById("countInput");
+                players = parseInt(countInput.value);
+                isPlayerCountSet = true;
+
+                updatePlayerCount();
+                console.log("참가자 수 입력 받음");
+                
+                countInput.disabled = true;
+                $("#countInputButton").prop("disabled", true);
+            }
+
+            $("#countInputButton").on("click", function() {
+                inputPlayerCount();
+            });
+
+            $("#countInput").on("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    inputPlayerCount();
+                }
+            });
+
+            function updatePlayerCount() {
+                let playerCount = document.getElementById("playerCount");
+                playerCount.innerHTML = "현재 참가자 수: " + players;
+                console.log("참가자 수 업데이트 함");
+            }
+
+            updatePlayerCount();
+
+            $("#startButton").on("click", function() {
+                playGame();
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <input type="text" id="countInput" placeholder="참가자 수를 입력하세요">
+    <button id="countInputButton">참가자 수 입력</button>
+    <p id="playerCount"></p>
+
+    <input type="text" id="wordInput">
+    <button id="startButton">시작하기</button>
+    <p id="result"></p>
+    
+</body>
+</html>

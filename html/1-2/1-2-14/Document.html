@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .special {
+            width: 150px;
+            height: 150px;
+            border: 2px solid red;
+            float: left; /* Corrected float value */
+        }
+    </style>
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            $('#hide').click(function() {
+                $('.special').hide();
+            });
+            $('#show').click(function() {
+                $('.special').show();
+            });
+            $('#toggle').click(function() {
+                $('.special').toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" id="hide" value="hide">
+        <input type="button" id="show" value="show">
+        <input type="button" id="toggle" value="toggle">
+    </form>
+    <div class="special">
+        <img src="https://mblogthumb-phinf.pstatic.net/MjAyMjAyMDdfMjEy/MDAxNjQ0MTk0Mzk2MzY3.WAeeVCu2V3vqEz_98aWMOjK2RUKI_yHYbuZxrokf-0Ug.sV3LNWlROCJTkeS14PMu2UBl5zTkwK70aKX8B1w2oKQg.JPEG.41minit/1643900851960.jpg?type=w800" width="100" height="100">
+    </div>
+</body>
+</html>
